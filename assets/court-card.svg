@@ -1,64 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180">
   <defs>
     <linearGradient id="stad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0e2247"/>
-      <stop offset="1" stop-color="#091022"/>
+      <stop offset="0" stop-color="#0a1730"/>
+      <stop offset="0.55" stop-color="#0b1c3a"/>
+      <stop offset="1" stop-color="#08101f"/>
     </linearGradient>
     <linearGradient id="surf" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3f8bf2"/>
-      <stop offset="1" stop-color="#1f5bc4"/>
+      <stop offset="0" stop-color="#3f86e8"/>
+      <stop offset="1" stop-color="#225fc0"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.05" r="0.95">
-      <stop offset="0" stop-color="#2c5aa8" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#2c5aa8" stop-opacity="0"/>
+    <linearGradient id="runoff" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173f7e"/>
+      <stop offset="1" stop-color="#102f63"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fd0ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#9fd0ff" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="mesh" width="4" height="3.4" patternUnits="userSpaceOnUse">
+      <path d="M0 0H4M0 0V3.4" stroke="#cfe0f5" stroke-width="0.35" stroke-opacity="0.5" fill="none"/>
+    </pattern>
+    <radialGradient id="spot" cx="0.5" cy="0" r="0.8">
+      <stop offset="0" stop-color="#3768b8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3768b8" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
   <!-- estadio -->
   <rect width="320" height="180" fill="url(#stad)"/>
-  <rect width="320" height="180" fill="url(#glow)"/>
-  <circle cx="80" cy="12" r="2" fill="#d7e6ff" opacity="0.6"/>
-  <circle cx="160" cy="8" r="2.4" fill="#d7e6ff" opacity="0.8"/>
-  <circle cx="240" cy="12" r="2" fill="#d7e6ff" opacity="0.6"/>
+  <rect width="320" height="180" fill="url(#spot)"/>
 
+  <!-- público (filas tenues detrás del fondo) -->
+  <g fill="#24365c" opacity="0.55">
+    <rect x="60" y="14" width="200" height="3" rx="1.5"/>
+    <rect x="52" y="20" width="216" height="3" rx="1.5"/>
+    <rect x="44" y="26" width="232" height="3" rx="1.5"/>
+  </g>
+  <!-- luces -->
+  <circle cx="70" cy="9" r="2" fill="#dceaff" opacity="0.85"/>
+  <circle cx="160" cy="6" r="2.4" fill="#eaf3ff"/>
+  <circle cx="250" cy="9" r="2" fill="#dceaff" opacity="0.85"/>
+
+  <!-- paredes laterales de cristal -->
+  <polygon points="20,168 104,50 104,34 20,150" fill="url(#glass)" stroke="#5e86c2" stroke-width="0.5" stroke-opacity="0.6"/>
+  <polygon points="300,168 216,50 216,34 300,150" fill="url(#glass)" stroke="#5e86c2" stroke-width="0.5" stroke-opacity="0.6"/>
   <!-- pared de cristal del fondo -->
-  <polygon points="122,46 198,46 198,31 122,31" fill="#0e244c" stroke="#43689f" stroke-width="0.8" opacity="0.9"/>
+  <polygon points="104,50 216,50 216,30 104,30" fill="url(#glass)" stroke="#6e94cf" stroke-width="0.7" stroke-opacity="0.7"/>
+  <line x1="160" y1="30" x2="160" y2="50" stroke="#6e94cf" stroke-width="0.5" stroke-opacity="0.5"/>
 
-  <!-- superficie de la cancha (piso entre paredes) -->
-  <polygon points="122,46 198,46 290,168 30,168" fill="url(#surf)"/>
+  <!-- piso: run-off + cancha -->
+  <polygon points="104,50 216,50 300,168 20,168" fill="url(#runoff)"/>
+  <polygon points="120,58 200,58 280,166 40,166" fill="url(#surf)"/>
+  <polygon points="120,58 200,58 280,166 40,166" fill="url(#sheen)"/>
 
   <!-- líneas reglamentarias -->
-  <g stroke="#f1f6ff" fill="none" stroke-linecap="round">
-    <!-- perímetro (base de las paredes) -->
-    <polygon points="122,46 198,46 290,168 30,168" stroke-width="1.8" stroke-opacity="0.95"/>
-    <!-- líneas de saque (a 3 m del fondo, una por lado) -->
-    <line x1="110" y1="62.5" x2="210" y2="62.5" stroke-width="1.5" stroke-opacity="0.95"/>
-    <line x1="46"  y1="147"  x2="274" y2="147"  stroke-width="1.6" stroke-opacity="0.95"/>
-    <!-- línea central de saque: COMPLETA, de una línea de saque a la otra, cruzando la red -->
-    <line x1="160" y1="62.5" x2="160" y2="147" stroke-width="1.5" stroke-opacity="0.95"/>
+  <g stroke="#eef4ff" fill="none" stroke-linecap="round" stroke-opacity="0.95">
+    <polygon points="120,58 200,58 280,166 40,166" stroke-width="1.7"/>
+    <line x1="108.5" y1="73"  x2="211.5" y2="73"  stroke-width="1.4"/>
+    <line x1="52"    y1="148" x2="268"   y2="148" stroke-width="1.6"/>
+    <line x1="160"   y1="73"  x2="160"   y2="148" stroke-width="1.4"/>
   </g>
 
-  <!-- red en el medio -->
+  <!-- RED -->
   <g>
-    <!-- malla -->
-    <line x1="81" y1="100" x2="239" y2="100" stroke="#0a1428" stroke-width="6" stroke-opacity="0.30"/>
-    <g stroke="#e9effb" stroke-width="0.5" opacity="0.55">
-      <line x1="95" y1="93" x2="95" y2="100"/>
-      <line x1="120" y1="92" x2="120" y2="100"/>
-      <line x1="145" y1="91" x2="145" y2="100"/>
-      <line x1="160" y1="91" x2="160" y2="100"/>
-      <line x1="175" y1="91" x2="175" y2="100"/>
-      <line x1="200" y1="92" x2="200" y2="100"/>
-      <line x1="225" y1="93" x2="225" y2="100"/>
-    </g>
-    <!-- banda superior de la red -->
-    <path d="M81,100 Q160,90 239,100" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <!-- cuerpo de malla -->
+    <path d="M82,107 Q160,103 238,107 L238,113 Q160,118 82,113 Z" fill="#0c1b35" fill-opacity="0.55"/>
+    <path d="M82,107 Q160,103 238,107 L238,113 Q160,118 82,113 Z" fill="url(#mesh)"/>
+    <!-- cinta blanca superior -->
+    <path d="M82,107 Q160,103 238,107" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <!-- tensor central -->
+    <line x1="160" y1="105" x2="160" y2="117" stroke="#ffffff" stroke-width="1.4"/>
     <!-- postes -->
-    <line x1="81" y1="100" x2="81" y2="108" stroke="#dfe7f5" stroke-width="1.6"/>
-    <line x1="239" y1="100" x2="239" y2="108" stroke="#dfe7f5" stroke-width="1.6"/>
+    <line x1="82"  y1="104" x2="82"  y2="115" stroke="#d7e2f2" stroke-width="1.8"/>
+    <line x1="238" y1="104" x2="238" y2="115" stroke="#d7e2f2" stroke-width="1.8"/>
   </g>
 
   <!-- pelotas -->
-  <circle cx="200" cy="126" r="4" fill="#e9ff3d"/>
-  <circle cx="118" cy="150" r="3.2" fill="#e9ff3d"/>
+  <circle cx="206" cy="128" r="3.8" fill="#e9ff3d"/>
+  <circle cx="116" cy="150" r="3" fill="#e9ff3d"/>
 </svg>
