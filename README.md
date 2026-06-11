@@ -7,6 +7,12 @@ Medios de Comunicación en el Deporte.
 
 > El nombre **STARPOINT** es un placeholder: cambialo en `index.html` (buscá `STARPOINT`).
 
+## Fotos
+
+Las imágenes de `assets/` son fotos de pádel de **Pexels** (licencia libre, uso gratuito
+sin atribución obligatoria). Son ilustrativas: los jugadores reales (Tapia, Chingotto, etc.)
+son nombres de ejemplo y no se corresponden con las personas de las fotos.
+
 ## Para el PowerPoint
 
 En `mockups/` están las **7 pantallas exportadas como PNG** (alta resolución) listas para

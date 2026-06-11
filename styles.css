@@ -40,8 +40,8 @@ body{
 /* ---------- Phone ---------- */
 .stage{display:flex;justify-content:center}
 .phone{
-  position:relative;width:390px;height:800px;background:#000;border-radius:46px;
-  padding:12px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 2px #23262d, inset 0 0 0 6px #000;
+  position:relative;width:420px;height:880px;background:#000;border-radius:52px;
+  padding:11px;box-shadow:0 30px 90px rgba(0,0,0,.65),0 0 0 2px #23262d, inset 0 0 0 6px #000;
 }
 .phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);
   width:140px;height:26px;background:#000;border-radius:0 0 18px 18px;z-index:30}
@@ -108,18 +108,29 @@ body{
   repeating-linear-gradient(180deg,#16324a 0 2px,#13283b 2px 40px),
   linear-gradient(160deg,#173a55,#0e2233)}
 .hero{padding:0;overflow:hidden;cursor:pointer}
-.hero-media{position:relative;height:200px;padding:12px}
-.badge-live{position:absolute;top:12px;left:12px;background:var(--live);color:#fff;
-  font-weight:800;font-size:11px;padding:4px 9px;border-radius:6px;letter-spacing:.5px}
+.hero-media{position:relative;height:260px}
+.hero-photo{background:#0a0b0d url('assets/hero.jpg') center 45% / cover}
+.hero-grad{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(10,11,13,.15) 0%,rgba(10,11,13,0) 35%,rgba(10,11,13,.55) 75%,rgba(10,11,13,.95) 100%)}
+.badge-live{position:absolute;top:12px;left:12px;z-index:3;background:var(--live);color:#fff;
+  font-weight:800;font-size:11px;padding:5px 10px;border-radius:6px;letter-spacing:.5px;
+  box-shadow:0 4px 14px rgba(255,59,48,.4)}
 .badge-live.small{font-size:9px;padding:2px 6px}
-.viewers{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.55);color:#fff;
-  font-size:11px;font-weight:700;padding:4px 9px;border-radius:6px}
-.hero-score{position:absolute;left:12px;display:flex;gap:10px;align-items:center;
-  background:rgba(0,0,0,.45);padding:5px 10px;border-radius:8px;font-size:13px;font-weight:700}
-.hero-score{bottom:44px}.hero-score.alt{bottom:10px}
-.hero-score .pts{margin-left:auto;letter-spacing:2px}
-.hero-score .pts b{color:var(--volt)}
+.viewers{position:absolute;top:12px;right:12px;z-index:3;background:rgba(0,0,0,.55);color:#fff;
+  font-size:11px;font-weight:700;padding:5px 10px;border-radius:6px;backdrop-filter:blur(4px)}
 .flag{font-size:14px}
+
+/* Scorebug estilo transmisión */
+.scorebug{position:absolute;left:12px;bottom:12px;right:12px;z-index:3;
+  background:rgba(8,10,14,.66);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;padding:8px 10px;overflow:hidden}
+.scorebug::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--volt)}
+.sb-tour{font-size:9px;font-weight:800;letter-spacing:.8px;color:var(--volt);margin:0 0 5px 6px}
+.sb-line{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;padding:2px 0 2px 6px}
+.sb-team{flex:1;display:flex;align-items:center;gap:6px}
+.sb-sets{letter-spacing:3px;color:#c8ccd2;font-variant-numeric:tabular-nums}
+.sb-game{min-width:26px;text-align:center;background:var(--volt);color:#0a0b0d;border-radius:5px;padding:1px 0}
+.sb-line.srv .sb-game{background:#2a2e36;color:#fff}
 .hero-foot{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;gap:10px}
 .hero-foot h3{font-size:15px;font-weight:800}
 .play-fab{width:42px;height:42px;border-radius:50%;background:var(--volt);color:#0a0b0d;
@@ -152,9 +163,9 @@ body{
 .clips{display:flex;flex-direction:column;gap:12px}
 .clip{display:flex;gap:12px;align-items:center}
 .clip-thumb{position:relative;width:110px;height:66px;border-radius:12px;flex:0 0 110px;overflow:hidden}
-.g1{background:linear-gradient(135deg,#2b5cff,#16324a)}
-.g2{background:linear-gradient(135deg,#d4ff2b,#3a5a12)}
-.g3{background:linear-gradient(135deg,#ff7a59,#5a1f12)}
+.g1{background:#16324a url('assets/shot1.jpg') center/cover}
+.g2{background:#3a5a12 url('assets/court2.jpg') center/cover}
+.g3{background:#5a1f12 url('assets/shot2.jpg') center/cover}
 .clip-time{position:absolute;bottom:5px;right:5px;background:rgba(0,0,0,.6);font-size:10px;
   font-weight:700;padding:2px 5px;border-radius:5px}
 .clip-play{position:absolute;inset:0;display:grid;place-items:center;font-size:18px;color:#fff}
@@ -162,8 +173,12 @@ body{
 
 /* ---------- Player (En vivo) ---------- */
 .player-wrap{display:flex;gap:6px;padding:0 0 4px}
-.player{position:relative;border-radius:0;height:230px;flex:1}
-.player.single{height:230px}
+.player{position:relative;border-radius:0;height:250px;flex:1;overflow:hidden}
+.player::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,0) 28%,rgba(0,0,0,0) 60%,rgba(0,0,0,.6))}
+.player.single{height:250px}
+.live-photo{background:#0a0b0d url('assets/live.jpg') center 22%/cover}
+.player .badge-live,.player .viewers,.player .score-overlay,.player .cam-label,.player .back-btn{z-index:3}
 .player.split-second{display:none}
 .player-wrap.split .player.single{height:230px}
 .player-wrap.split .split-second{display:block}
@@ -320,6 +335,8 @@ body{
 .member-card{padding:0;overflow:hidden}
 .mc-top{display:flex;align-items:center;gap:12px;padding:16px;background:linear-gradient(120deg,rgba(212,255,43,.12),transparent)}
 .mc-top.a3{background:linear-gradient(120deg,rgba(255,122,89,.14),transparent)}
+.mc-banner{padding:26px 16px;background-size:cover!important;background-position:center 22%!important;background-repeat:no-repeat}
+.mc-banner b{font-size:17px}
 .mc-top b{font-size:16px;display:block}
 .perks{list-style:none;padding:4px 16px 12px}
 .perks li{font-size:13px;padding:6px 0;border-bottom:1px solid var(--line)}
