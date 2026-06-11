@@ -1,4 +1,4 @@
-/* ===================== RALLY · Pádel OTT — Mockup ===================== */
+/* ===================== STARPOINT · Pádel OTT — Mockup ===================== */
 :root{
   --bg:#0a0b0d;
   --surface:#15171b;
@@ -359,6 +359,10 @@ body{
 .tabbar-btn .ti{font-size:18px;line-height:1}
 .tabbar-btn.is-on{color:var(--volt)}
 .copa-btn{font-size:9px}
+
+/* ---------- Modo "solo celular" (para capturas / PowerPoint) ---------- */
+body.solo{padding:24px;background:#0a0b0d}
+body.solo .stage-head,body.solo .stage-foot{display:none}
 
 /* ---------- Responsive ---------- */
 @media (max-width:430px){

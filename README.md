@@ -1,11 +1,20 @@
-# RALLY · Mockup interactivo — Pádel OTT & Comunidad
+# STARPOINT · Mockup interactivo — Pádel OTT & Comunidad
 
 Prototipo navegable (no funcional) de una plataforma **DTC/OTT de pádel** pensada para
 la *Era de la Inmersión*: transmisión en vivo, comunidad y *sportainment* alrededor del
 circuito Premier Pádel. Pensado como **mockup para presentación oral** del proyecto de
 Medios de Comunicación en el Deporte.
 
-> El nombre **RALLY** es un placeholder: cambialo en `index.html` (buscá `RALLY`).
+> El nombre **STARPOINT** es un placeholder: cambialo en `index.html` (buscá `STARPOINT`).
+
+## Para el PowerPoint
+
+En `mockups/` están las **7 pantallas exportadas como PNG** (alta resolución) listas para
+**pegar en las diapositivas**: `inicio`, `vivo`, `stats`, `copa`, `comunidad`, `membresias`, `perfil`.
+
+Para demo en vivo dentro de la presentación, abrí `index.html` en el navegador (pantalla
+completa con F11). También podés enlazar una pantalla puntual con `index.html#vivo`,
+`index.html#stats`, etc. (agregá `?solo=1` para ver solo el celular, sin el fondo).
 
 ## Cómo verlo
 

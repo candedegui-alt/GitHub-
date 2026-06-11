@@ -1,4 +1,4 @@
-/* ===================== RALLY · Mockup — interacciones ===================== */
+/* ===================== STARPOINT · Mockup — interacciones ===================== */
 (function () {
   'use strict';
 
@@ -39,6 +39,15 @@
       showScreen(nav.getAttribute('data-nav'));
     }
   });
+
+  /* ---------- Enlaces directos por pantalla (#vivo, #stats, …) + modo captura ---------- */
+  function initFromUrl() {
+    var h = (location.hash || '').replace('#', '');
+    if (LABELS[h]) showScreen(h);
+    if (/[?&]solo=1/.test(location.search)) document.body.classList.add('solo');
+  }
+  initFromUrl();
+  window.addEventListener('hashchange', initFromUrl);
 
   /* ---------- Selección de cámara ---------- */
   var camChips = document.getElementById('camChips');
