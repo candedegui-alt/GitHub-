@@ -5,51 +5,60 @@
       <stop offset="1" stop-color="#091022"/>
     </linearGradient>
     <linearGradient id="surf" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3b86f0"/>
+      <stop offset="0" stop-color="#3f8bf2"/>
       <stop offset="1" stop-color="#1f5bc4"/>
     </linearGradient>
-    <linearGradient id="run" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1b4ea3"/>
-      <stop offset="1" stop-color="#123a82"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.05" r="0.9">
-      <stop offset="0" stop-color="#2c5aa8" stop-opacity="0.6"/>
+    <radialGradient id="glow" cx="0.5" cy="0.05" r="0.95">
+      <stop offset="0" stop-color="#2c5aa8" stop-opacity="0.55"/>
       <stop offset="1" stop-color="#2c5aa8" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
+  <!-- estadio -->
   <rect width="320" height="180" fill="url(#stad)"/>
   <rect width="320" height="180" fill="url(#glow)"/>
+  <circle cx="80" cy="12" r="2" fill="#d7e6ff" opacity="0.6"/>
+  <circle cx="160" cy="8" r="2.4" fill="#d7e6ff" opacity="0.8"/>
+  <circle cx="240" cy="12" r="2" fill="#d7e6ff" opacity="0.6"/>
 
-  <!-- luces de estadio -->
-  <circle cx="70" cy="12" r="2" fill="#d7e6ff" opacity="0.7"/>
-  <circle cx="160" cy="9" r="2.4" fill="#d7e6ff" opacity="0.85"/>
-  <circle cx="250" cy="12" r="2" fill="#d7e6ff" opacity="0.7"/>
+  <!-- pared de cristal del fondo -->
+  <polygon points="122,46 198,46 198,31 122,31" fill="#0e244c" stroke="#43689f" stroke-width="0.8" opacity="0.9"/>
 
-  <!-- run-off exterior -->
-  <polygon points="116,40 204,40 312,172 8,172" fill="url(#run)"/>
-  <!-- superficie -->
-  <polygon points="124,44 196,44 296,170 24,170" fill="url(#surf)"/>
+  <!-- superficie de la cancha (piso entre paredes) -->
+  <polygon points="122,46 198,46 290,168 30,168" fill="url(#surf)"/>
 
-  <!-- líneas -->
-  <g stroke="#f1f6ff" stroke-width="1.5" fill="none" opacity="0.95">
-    <line x1="124" y1="44" x2="196" y2="44"/>
-    <line x1="24" y1="170" x2="296" y2="170"/>
-    <line x1="124" y1="44" x2="24" y2="170"/>
-    <line x1="196" y1="44" x2="296" y2="170"/>
-    <line x1="142" y1="78" x2="178" y2="78"/>
-    <line x1="86" y1="140" x2="234" y2="140"/>
-    <line x1="160" y1="78" x2="160" y2="140"/>
+  <!-- líneas reglamentarias -->
+  <g stroke="#f1f6ff" fill="none" stroke-linecap="round">
+    <!-- perímetro (base de las paredes) -->
+    <polygon points="122,46 198,46 290,168 30,168" stroke-width="1.8" stroke-opacity="0.95"/>
+    <!-- líneas de saque (a 3 m del fondo, una por lado) -->
+    <line x1="110" y1="62.5" x2="210" y2="62.5" stroke-width="1.5" stroke-opacity="0.95"/>
+    <line x1="46"  y1="147"  x2="274" y2="147"  stroke-width="1.6" stroke-opacity="0.95"/>
+    <!-- línea central de saque: COMPLETA, de una línea de saque a la otra, cruzando la red -->
+    <line x1="160" y1="62.5" x2="160" y2="147" stroke-width="1.5" stroke-opacity="0.95"/>
   </g>
 
-  <!-- red -->
+  <!-- red en el medio -->
   <g>
-    <line x1="74" y1="108" x2="246" y2="108" stroke="#e7eefc" stroke-width="2.4"/>
-    <line x1="74" y1="108" x2="246" y2="108" stroke="#0a1428" stroke-width="0.5"/>
+    <!-- malla -->
+    <line x1="81" y1="100" x2="239" y2="100" stroke="#0a1428" stroke-width="6" stroke-opacity="0.30"/>
+    <g stroke="#e9effb" stroke-width="0.5" opacity="0.55">
+      <line x1="95" y1="93" x2="95" y2="100"/>
+      <line x1="120" y1="92" x2="120" y2="100"/>
+      <line x1="145" y1="91" x2="145" y2="100"/>
+      <line x1="160" y1="91" x2="160" y2="100"/>
+      <line x1="175" y1="91" x2="175" y2="100"/>
+      <line x1="200" y1="92" x2="200" y2="100"/>
+      <line x1="225" y1="93" x2="225" y2="100"/>
+    </g>
+    <!-- banda superior de la red -->
+    <path d="M81,100 Q160,90 239,100" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <!-- postes -->
+    <line x1="81" y1="100" x2="81" y2="108" stroke="#dfe7f5" stroke-width="1.6"/>
+    <line x1="239" y1="100" x2="239" y2="108" stroke="#dfe7f5" stroke-width="1.6"/>
   </g>
 
   <!-- pelotas -->
-  <circle cx="205" cy="125" r="4" fill="#e9ff3d"/>
-  <circle cx="120" cy="150" r="3.4" fill="#e9ff3d"/>
-  <circle cx="168" cy="96" r="2.6" fill="#e9ff3d"/>
+  <circle cx="200" cy="126" r="4" fill="#e9ff3d"/>
+  <circle cx="118" cy="150" r="3.2" fill="#e9ff3d"/>
 </svg>
