@@ -7,11 +7,11 @@ Medios de Comunicación en el Deporte.
 
 > El nombre **STARPOINT** es un placeholder: cambialo en `index.html` (buscá `STARPOINT`).
 
-## Fotos
+## Diseño
 
-Las imágenes de `assets/` son fotos de pádel de **Pexels** (licencia libre, uso gratuito
-sin atribución obligatoria). Son ilustrativas: los jugadores reales (Tapia, Chingotto, etc.)
-son nombres de ejemplo y no se corresponden con las personas de las fotos.
+Estética minimalista en **azul y amarillo**, dark mode. En vez de fotos de stock se usa un
+**gráfico vectorial de cancha** (`assets/court-card.svg`) con look de transmisión, al estilo
+de las tarjetas "en vivo / próximos". Los nombres de jugadores son de ejemplo.
 
 ## Para el PowerPoint
 

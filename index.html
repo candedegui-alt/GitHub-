@@ -10,44 +10,32 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ===================== BACKDROP / PRESENTACIÓN ===================== -->
   <header class="stage-head">
     <div class="stage-brand">
       <span class="logo-dot"></span>
       <h1>STARPOINT</h1>
       <span class="stage-tag">Pádel · OTT &amp; Comunidad</span>
     </div>
-    <p class="stage-sub">
-      Mockup interactivo — tocá el celular para navegar. Probá la barra inferior,
-      el cambio de cámara, la pantalla dividida y las votaciones de la Copa.
-    </p>
+    <p class="stage-sub">Mockup interactivo — tocá el celular para navegar.</p>
     <div class="stage-legend" id="screenLabel">Pantalla: Inicio</div>
   </header>
 
-  <!-- ===================== DEVICE ===================== -->
   <main class="stage">
     <div class="phone">
       <div class="phone-notch"></div>
       <div class="screen">
 
-        <!-- Barra de estado -->
         <div class="statusbar">
           <span class="sb-time">9:41</span>
-          <span class="sb-icons">
-            <i class="sb-net"></i><i class="sb-wifi"></i><i class="sb-bat"></i>
-          </span>
+          <span class="sb-icons"><i class="sb-net"></i><i class="sb-wifi"></i><i class="sb-bat"></i></span>
         </div>
 
-        <!-- ============ VISTAS ============ -->
         <div class="views">
 
           <!-- ====== INICIO ====== -->
           <section class="view is-active" id="view-inicio">
             <div class="topbar">
-              <div class="brand">
-                <span class="logo-dot sm"></span>
-                <span class="brand-name">STARPOINT</span>
-              </div>
+              <div class="brand"><span class="logo-dot sm"></span><span class="brand-name">STARPOINT</span></div>
               <div class="topbar-actions">
                 <button class="icon-btn" aria-label="Notificaciones">🔔</button>
                 <span class="me-chip" data-nav="perfil">CD</span>
@@ -55,71 +43,80 @@
             </div>
 
             <div class="scroll">
-              <!-- EN VIVO AHORA -->
-              <p class="kicker"><span class="live-dot"></span> En vivo ahora</p>
-              <article class="hero card live-hero" data-nav="vivo">
-                <div class="hero-media hero-photo">
-                  <div class="hero-grad"></div>
-                  <span class="badge-live">● EN VIVO</span>
-                  <span class="viewers">👁 24.310 viendo</span>
-                  <div class="scorebug">
-                    <div class="sb-tour">PREMIER PÁDEL · BUENOS AIRES P1 · FINAL</div>
-                    <div class="sb-line"><span class="sb-team"><span class="flag">🇦🇷</span> Tapia / Coello</span><span class="sb-sets">6 4</span><span class="sb-game">40</span></div>
-                    <div class="sb-line srv"><span class="sb-team"><span class="flag">🇪🇸</span> Chingotto / Di Nenno</span><span class="sb-sets">4 5</span><span class="sb-game">30</span></div>
-                  </div>
-                </div>
-                <div class="hero-foot">
-                  <div>
-                    <h3>Final — Premier Pádel Buenos Aires</h3>
-                    <p class="muted">3 cámaras · Stats con IA · Pantalla dividida</p>
-                  </div>
-                  <span class="play-fab">▶</span>
-                </div>
-              </article>
 
-              <!-- STORIES / MEMBRESÍAS -->
-              <div class="row-head">
-                <h2>Contenido de jugadores</h2>
-                <button class="link" data-nav="membresias">Membresías</button>
+              <!-- SECCIÓN: En vivo y próximos -->
+              <div class="section">
+                <div class="row-head"><h2>En vivo y próximos</h2><button class="link" data-nav="vivo">Ver todo</button></div>
+                <div class="vcards">
+                  <article class="vcard" data-nav="vivo">
+                    <div class="vthumb">
+                      <span class="vlogo">✦ STARPOINT</span>
+                      <span class="vcourt">CENTRE COURT</span>
+                      <span class="vbadge live">● LIVE</span>
+                      <span class="vbar"><i></i></span>
+                    </div>
+                    <h4>Final — Tapia/Coello vs Chingotto/Galán</h4>
+                    <p class="muted sm">Buenos Aires Open · empezó hace 1h 12m</p>
+                  </article>
+                  <article class="vcard" data-nav="vivo">
+                    <div class="vthumb">
+                      <span class="vlogo">✦ STARPOINT</span>
+                      <span class="vcourt">SECONDARY COURT</span>
+                      <span class="vbadge">Próximo</span>
+                    </div>
+                    <h4>Semifinal — Lebrón/Stupaczuk</h4>
+                    <p class="muted sm">Buenos Aires Open · hoy 20:00</p>
+                  </article>
+                  <article class="vcard" data-nav="vivo">
+                    <div class="vthumb">
+                      <span class="vlogo">✦ STARPOINT</span>
+                      <span class="vcourt">CENTRE COURT</span>
+                      <span class="vbadge">Próximo</span>
+                    </div>
+                    <h4>Cuartos — Paquito/Yanguas</h4>
+                    <p class="muted sm">Valencia Open · mañana 17:30</p>
+                  </article>
+                </div>
               </div>
-              <div class="stories" id="stories">
-                <button class="story" data-nav="membresias"><span class="ring"><span class="ava a1">AT</span></span>Tapia</button>
-                <button class="story" data-nav="membresias"><span class="ring"><span class="ava a2">AC</span></span>Coello</button>
-                <button class="story" data-nav="membresias"><span class="ring"><span class="ava a3">FC</span></span>Chingotto</button>
-                <button class="story" data-nav="membresias"><span class="ring"><span class="ava a4">DN</span></span>Di Nenno</button>
-                <button class="story" data-nav="membresias"><span class="ring"><span class="ava a5">JL</span></span>Lebrón</button>
-                <button class="story" data-nav="membresias"><span class="ring"><span class="ava a6">PN</span></span>Paquito</button>
+
+              <!-- SECCIÓN: Contenido de jugadores -->
+              <div class="section">
+                <div class="row-head"><h2>Contenido de jugadores</h2><button class="link" data-nav="membresias">Membresías</button></div>
+                <div class="stories">
+                  <button class="story" data-nav="membresias"><span class="ring"><span class="ava">AT</span></span>Tapia</button>
+                  <button class="story" data-nav="membresias"><span class="ring"><span class="ava">AC</span></span>Coello</button>
+                  <button class="story" data-nav="membresias"><span class="ring"><span class="ava">FC</span></span>Chingotto</button>
+                  <button class="story" data-nav="membresias"><span class="ring"><span class="ava">AG</span></span>Galán</button>
+                  <button class="story" data-nav="membresias"><span class="ring"><span class="ava">JL</span></span>Lebrón</button>
+                  <button class="story" data-nav="membresias"><span class="ring"><span class="ava">PN</span></span>Paquito</button>
+                </div>
               </div>
 
-              <!-- STATS / DATOS PREMIER PÁDEL -->
-              <article class="card promo" data-nav="stats">
-                <div class="promo-text">
-                  <span class="tag-volt">Datos en vivo · IA tracking</span>
-                  <h3>Velocidad de pelota: 187 km/h</h3>
-                  <p class="muted">Stats de Premier Pádel en tiempo real: remates, saques, rallies y resultados.</p>
+              <!-- SECCIÓN: Accesos -->
+              <div class="section">
+                <div class="row-head"><h2>Explorá</h2></div>
+                <div class="tiles">
+                  <button class="tile" data-nav="stats">
+                    <span class="tile-ico">📊</span>
+                    <b>Estadísticas</b>
+                    <span class="muted sm">Velocidad de pelota y datos en vivo</span>
+                  </button>
+                  <button class="tile" data-nav="copa">
+                    <span class="tile-ico">🏆</span>
+                    <b>Máster Cup</b>
+                    <span class="muted sm">Votá los cruces del torneo</span>
+                  </button>
                 </div>
-                <span class="promo-arrow">→</span>
-              </article>
-
-              <!-- MÁSTER CUP -->
-              <article class="card promo promo-cup" data-nav="copa">
-                <div class="promo-text">
-                  <span class="tag-volt">Vos armás el torneo</span>
-                  <h3>Máster Cup</h3>
-                  <p class="muted">Votá los cruces, de 16avos a la final. Cierra en 02:14:08.</p>
-                </div>
-                <span class="promo-arrow">🏆</span>
-              </article>
-
-              <!-- HIGHLIGHTS -->
-              <div class="row-head">
-                <h2>Clips destacados</h2>
-                <button class="link">Ver todo</button>
               </div>
-              <div class="clips">
-                <div class="clip"><div class="clip-thumb g1"><span class="clip-time">0:32</span><span class="clip-play">▶</span></div><p>La víbora de Tapia que rompió internet</p></div>
-                <div class="clip"><div class="clip-thumb g2"><span class="clip-time">0:48</span><span class="clip-play">▶</span></div><p>Bandeja x3 de Coello en el match point</p></div>
-                <div class="clip"><div class="clip-thumb g3"><span class="clip-time">1:05</span><span class="clip-play">▶</span></div><p>El punto del año en Buenos Aires</p></div>
+
+              <!-- SECCIÓN: Clips -->
+              <div class="section">
+                <div class="row-head"><h2>Clips destacados</h2><button class="link">Ver todo</button></div>
+                <div class="clips">
+                  <div class="clip"><div class="clip-thumb"><span class="clip-time">0:32</span><span class="clip-play">▶</span></div><p>La víbora de Tapia que rompió internet</p></div>
+                  <div class="clip"><div class="clip-thumb"><span class="clip-time">0:48</span><span class="clip-play">▶</span></div><p>Bandeja x3 de Coello en el match point</p></div>
+                  <div class="clip"><div class="clip-thumb"><span class="clip-time">1:05</span><span class="clip-play">▶</span></div><p>El punto del año en Buenos Aires</p></div>
+                </div>
               </div>
 
               <div class="spacer"></div>
@@ -131,21 +128,21 @@
             <div class="player-wrap" id="playerWrap">
               <div class="player single live-photo" id="playerMain">
                 <button class="icon-btn ghost back-btn" data-nav="inicio">‹</button>
-                <span class="badge-live">● LIVE</span>
+                <span class="badge-live">● EN VIVO</span>
                 <span class="viewers">👁 24.310</span>
-                <div class="score-overlay">
-                  <div class="so-row"><span class="flag">🇦🇷</span> Tapia/Coello <b>6 4 40</b></div>
-                  <div class="so-row"><span class="flag">🇪🇸</span> Chingotto/Di Nenno <b>4 5 30</b></div>
+                <div class="scorebug in-player">
+                  <div class="sb-tour">BUENOS AIRES OPEN · FINAL</div>
+                  <div class="sb-line"><span class="sb-team"><span class="flag">🇦🇷</span> Tapia / Coello</span><span class="sb-set">6</span><span class="sb-set">4</span><span class="sb-game">30</span></div>
+                  <div class="sb-line srv"><span class="sb-team"><span class="flag">🇪🇸</span> Chingotto / Galán</span><span class="sb-set">3</span><span class="sb-set">5</span><span class="sb-game">40</span></div>
                 </div>
                 <span class="cam-label" id="camLabel">Cámara Principal</span>
               </div>
-              <div class="player split-second g2" id="playerSecond">
+              <div class="player split-second live-photo2" id="playerSecond">
                 <span class="badge-live small">● LIVE</span>
-                <span class="cam-label">Lebrón/Galán · Semis</span>
+                <span class="cam-label">Lebrón/Stupaczuk · Semis</span>
               </div>
             </div>
 
-            <!-- Cámaras -->
             <div class="cam-strip">
               <span class="cam-title">Elegí tu cámara</span>
               <div class="chips" id="camChips">
@@ -153,145 +150,113 @@
                 <button class="chip" data-cam="Cámara Táctica (cenital)">🛰️ Táctica</button>
                 <button class="chip" data-cam="Player-cam · Tapia">⭐ Player-cam</button>
                 <button class="chip" data-cam="Cámara 360°">🔄 360°</button>
-                <button class="chip" data-cam="Cámara de banco">🪑 Banco</button>
               </div>
-              <button class="split-toggle" id="splitToggle">
-                <span class="st-ico">⊞</span> Pantalla dividida
-              </button>
+              <button class="split-toggle" id="splitToggle"><span class="st-ico">⊞</span> Pantalla dividida</button>
             </div>
 
-            <!-- Tabs -->
             <div class="tabs" id="liveTabs">
-              <button class="tab is-on" data-tab="stats">📊 Stats IA</button>
-              <button class="tab" data-tab="chat">💬 Chat</button>
-              <button class="tab" data-tab="pred">🔮 Predicción</button>
+              <button class="tab is-on" data-tab="stats">Stats</button>
+              <button class="tab" data-tab="chat">Chat</button>
+              <button class="tab" data-tab="pred">Predicción</button>
             </div>
 
             <div class="tab-body scroll">
-              <!-- STATS IA -->
               <div class="tab-pane is-on" id="tab-stats">
-                <div class="ai-banner"><span class="tag-volt">IA</span> Datos en vivo · Ball tracking</div>
                 <div class="speed-inline">
                   <div><b>187</b><span class="muted sm">km/h último remate</span></div>
                   <div><b>173</b><span class="muted sm">km/h saque máx.</span></div>
                   <div><b>14</b><span class="muted sm">golpes rally + largo</span></div>
                 </div>
+                <p class="lbl-min">Probabilidad de victoria · IA</p>
                 <div class="winbar">
                   <div class="winbar-fill" style="width:63%"><span>Tapia/Coello 63%</span></div>
                   <div class="winbar-alt"><span>37%</span></div>
                 </div>
-                <p class="muted sm">Probabilidad de victoria · IA en tiempo real</p>
                 <div class="stat-grid">
                   <div class="stat"><span class="sv">71%</span><span class="sl">Efectividad 1er saque</span></div>
                   <div class="stat"><span class="sv">28</span><span class="sl">Winners</span></div>
-                  <div class="stat"><span class="sv">92</span><span class="sl">km/h vel. media pelota</span></div>
+                  <div class="stat"><span class="sv">92</span><span class="sl">km/h vel. media</span></div>
                   <div class="stat"><span class="sv">9</span><span class="sl">Smashes ganadores</span></div>
                 </div>
-                <div class="heat card">
-                  <h4>Mapa de calor · Tapia</h4>
-                  <div class="court-mini">
-                    <span class="dot" style="left:22%;top:30%"></span>
-                    <span class="dot big" style="left:70%;top:62%"></span>
-                    <span class="dot" style="left:55%;top:45%"></span>
-                    <span class="dot mid" style="left:80%;top:40%"></span>
-                    <span class="dot" style="left:35%;top:70%"></span>
-                    <div class="net"></div>
-                  </div>
-                  <p class="muted sm">Lectura IA: domina la red por la diagonal derecha. 78% de puntos ganados en posición ofensiva.</p>
-                </div>
               </div>
 
-              <!-- CHAT -->
               <div class="tab-pane" id="tab-chat">
                 <div class="chat">
-                  <div class="msg"><b class="u1">@valen.padel</b> qué bestia Tapia 🔥</div>
-                  <div class="msg"><b class="u2">@mardel09</b> la táctica de subir los dos a la red les está saliendo</div>
-                  <div class="msg"><b class="u3">@fan_coello</b> arriba ARG 🇦🇷🇦🇷</div>
-                  <div class="msg"><b class="u4">@padel.es</b> Chingotto no se rinde, gran defensa</div>
-                  <div class="msg"><b class="u1">@valen.padel</b> alguien viendo la cámara táctica? brutal</div>
+                  <div class="msg"><b>@valen.padel</b> qué bestia Tapia 🔥</div>
+                  <div class="msg"><b>@mardel09</b> la táctica de subir los dos a la red les sale</div>
+                  <div class="msg"><b>@fan_arg</b> arriba ARG 🇦🇷</div>
+                  <div class="msg"><b>@padel.es</b> Galán no se rinde, gran defensa</div>
                 </div>
-                <div class="chat-input">
-                  <input placeholder="Escribí en el chat en vivo…" />
-                  <button class="send">➤</button>
-                </div>
+                <div class="chat-input"><input placeholder="Escribí en el chat en vivo…" /><button class="send">➤</button></div>
               </div>
 
-              <!-- PREDICCIÓN -->
               <div class="tab-pane" id="tab-pred">
                 <div class="card pred-card">
                   <span class="tag-volt">+50 pts Fantasy</span>
                   <h4>¿Quién gana este game?</h4>
                   <div class="vote-pair" data-vote>
                     <button class="vote-opt"><span class="vo-name">Tapia / Coello</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
-                    <button class="vote-opt"><span class="vo-name">Chingotto / Di Nenno</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
+                    <button class="vote-opt"><span class="vo-name">Chingotto / Galán</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
                   </div>
-                  <p class="muted sm vote-hint">Tocá una opción para votar — sumás puntos en tu Fantasy.</p>
+                  <p class="muted sm vote-hint">Tocá una opción para votar.</p>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- ====== STATS / PARTIDOS PREMIER PÁDEL ====== -->
+          <!-- ====== ESTADÍSTICAS ====== -->
           <section class="view" id="view-stats">
             <div class="topbar">
               <button class="icon-btn ghost" data-nav="inicio">‹</button>
-              <div class="brand"><span class="brand-name">Premier Pádel · Datos</span></div>
+              <div class="brand"><span class="brand-name">Estadísticas</span></div>
               <span class="count-pill"><span class="live-dot"></span> En vivo</span>
             </div>
             <div class="scroll">
 
-              <!-- VELOCÍMETRO -->
               <article class="card speed-card">
-                <span class="tag-volt">IA Ball Tracking · en vivo</span>
-                <div class="speedo">
-                  <span class="speed-num" id="speedNum">187</span>
-                  <span class="speed-unit">km/h</span>
-                </div>
-                <p class="muted sm speed-cap">Velocidad del último remate · <b>A. Tapia</b></p>
+                <span class="lbl-min">Velocidad de pelota · IA en vivo</span>
+                <div class="speedo"><span class="speed-num" id="speedNum">187</span><span class="speed-unit">km/h</span></div>
+                <p class="muted sm speed-cap">Último remate · <b>A. Tapia</b></p>
                 <div class="speed-row">
-                  <div><b>173</b><span class="muted sm">km/h<br>saque máx.</span></div>
-                  <div><b>92</b><span class="muted sm">km/h<br>vel. media</span></div>
-                  <div><b>14</b><span class="muted sm">golpes<br>rally + largo</span></div>
-                  <div><b>3.240</b><span class="muted sm">metros<br>recorridos</span></div>
+                  <div><b>173</b><span class="muted sm">km/h saque máx.</span></div>
+                  <div><b>92</b><span class="muted sm">km/h vel. media</span></div>
+                  <div><b>14</b><span class="muted sm">rally + largo</span></div>
+                  <div><b>3.240</b><span class="muted sm">metros recorridos</span></div>
                 </div>
               </article>
 
-              <!-- PARTIDO EN VIVO · COMPARATIVA -->
               <article class="card match-stats">
                 <div class="ms-head">
                   <div class="ms-team"><span class="flag">🇦🇷</span> Tapia / Coello</div>
-                  <div class="ms-score">6 4 · <span class="live-dot"></span></div>
-                  <div class="ms-team r"><span class="flag">🇪🇸</span> Chingotto / Di Nenno</div>
+                  <div class="ms-score">6 4</div>
+                  <div class="ms-team r">Chingotto / Galán <span class="flag">🇪🇸</span></div>
                 </div>
                 <div class="cmp"><span class="cl">28</span><span class="cbar"><i class="cl-f" style="width:62%"></i><i class="cr-f" style="width:38%"></i></span><span class="cr">17</span></div>
                 <p class="cmp-lbl">Winners</p>
                 <div class="cmp"><span class="cl">12</span><span class="cbar"><i class="cl-f" style="width:44%"></i><i class="cr-f" style="width:56%"></i></span><span class="cr">15</span></div>
                 <p class="cmp-lbl">Errores no forzados</p>
-                <div class="cmp"><span class="cl">71%</span><span class="cbar"><i class="cl-f" style="width:71%"></i><i class="cr-f" style="width:64%"></i></span><span class="cr">64%</span></div>
-                <p class="cmp-lbl">Efectividad 1er saque</p>
                 <div class="cmp"><span class="cl">187</span><span class="cbar"><i class="cl-f" style="width:58%"></i><i class="cr-f" style="width:51%"></i></span><span class="cr">171</span></div>
                 <p class="cmp-lbl">Remate más rápido (km/h)</p>
                 <div class="cmp"><span class="cl">78%</span><span class="cbar"><i class="cl-f" style="width:78%"></i><i class="cr-f" style="width:55%"></i></span><span class="cr">55%</span></div>
                 <p class="cmp-lbl">Puntos ganados en la red</p>
               </article>
 
-              <!-- RESULTADOS PREMIER PÁDEL -->
-              <div class="row-head"><h2>Resultados Premier Pádel</h2><button class="link">Calendario</button></div>
+              <div class="row-head"><h2>Resultados</h2><button class="link">Calendario</button></div>
               <div class="results">
                 <div class="result card">
-                  <span class="res-tag">FINAL · BUENOS AIRES P1</span>
+                  <span class="res-tag">FINAL · BUENOS AIRES OPEN</span>
                   <div class="res-row"><span>Tapia / Coello</span><b>6 7 6</b></div>
-                  <div class="res-row muted"><span>Lebrón / Galán</span><b>4 6 3</b></div>
+                  <div class="res-row muted"><span>Lebrón / Stupaczuk</span><b>4 6 3</b></div>
                 </div>
                 <div class="result card">
-                  <span class="res-tag">SEMIFINAL · BUENOS AIRES P1</span>
-                  <div class="res-row"><span>Chingotto / Di Nenno</span><b>6 6</b></div>
-                  <div class="res-row muted"><span>Paquito / Stupaczuk</span><b>3 4</b></div>
+                  <span class="res-tag">SEMIFINAL · BUENOS AIRES OPEN</span>
+                  <div class="res-row"><span>Chingotto / Galán</span><b>6 6</b></div>
+                  <div class="res-row muted"><span>Paquito / Yanguas</span><b>3 4</b></div>
                 </div>
                 <div class="result card upcoming">
-                  <span class="res-tag volt">PRÓXIMO · MÁLAGA P1 · 18 ENE</span>
+                  <span class="res-tag volt">PRÓXIMO · VALENCIA OPEN · 18 ENE</span>
                   <div class="res-row"><span>Tapia / Coello</span><b>—</b></div>
-                  <div class="res-row"><span>Chingotto / Di Nenno</span><b>—</b></div>
+                  <div class="res-row"><span>Chingotto / Galán</span><b>—</b></div>
                 </div>
               </div>
               <div class="spacer"></div>
@@ -306,9 +271,9 @@
             </div>
             <div class="scroll">
               <div class="copa-hero card">
-                <span class="tag-volt">Pretemporada · Vos decidís</span>
+                <span class="lbl-min">Pretemporada · vos decidís</span>
                 <h2>Vos armás el torneo</h2>
-                <p class="muted">Votá quién enfrenta a quién en la Máster Cup. De 16avos a la final, los cruces los elige la comunidad.</p>
+                <p class="muted">Votá quién enfrenta a quién. De 16avos a la final, los cruces los elige la comunidad.</p>
               </div>
 
               <div class="bracket-stages">
@@ -319,27 +284,25 @@
                 <button class="stage-pill">Final</button>
               </div>
 
-              <h3 class="vote-h">Cruce destacado · votá tu favorito</h3>
-
+              <p class="lbl-min">Cruce destacado · votá tu favorito</p>
               <div class="card vote-match" data-vote>
-                <button class="vote-opt"><span class="ava a1">AT</span><span class="vo-name">Tapia / Coello</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
+                <button class="vote-opt"><span class="ava">AT</span><span class="vo-name">Tapia / Coello</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
                 <span class="vs">VS</span>
-                <button class="vote-opt"><span class="ava a5">JL</span><span class="vo-name">Lebrón / Galán</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
+                <button class="vote-opt"><span class="ava">JL</span><span class="vo-name">Lebrón / Stupaczuk</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
               </div>
-
               <div class="card vote-match" data-vote>
-                <button class="vote-opt"><span class="ava a3">FC</span><span class="vo-name">Chingotto / Di Nenno</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
+                <button class="vote-opt"><span class="ava">FC</span><span class="vo-name">Chingotto / Galán</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
                 <span class="vs">VS</span>
-                <button class="vote-opt"><span class="ava a6">PN</span><span class="vo-name">Paquito / Stupa</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
+                <button class="vote-opt"><span class="ava">PN</span><span class="vo-name">Paquito / Yanguas</span><span class="vo-bar"><i style="width:0%"></i></span><span class="vo-pct">—</span></button>
               </div>
 
               <div class="mini-bracket card">
                 <h4>Tu cuadro</h4>
                 <div class="mb-row"><span class="mb-team on">Tapia/Coello</span><span class="mb-line"></span></div>
-                <div class="mb-row"><span class="mb-team">Lebrón/Galán</span></div>
+                <div class="mb-row"><span class="mb-team">Lebrón/Stupaczuk</span></div>
                 <div class="mb-row mb-final"><span class="mb-team">Final · 21 ENE</span></div>
-                <div class="mb-row"><span class="mb-team on">Chingotto/Di Nenno</span><span class="mb-line"></span></div>
-                <div class="mb-row"><span class="mb-team">Paquito/Stupa</span></div>
+                <div class="mb-row"><span class="mb-team on">Chingotto/Galán</span><span class="mb-line"></span></div>
+                <div class="mb-row"><span class="mb-team">Paquito/Yanguas</span></div>
               </div>
               <div class="spacer"></div>
             </div>
@@ -354,28 +317,28 @@
             <div class="scroll">
               <div class="channels">
                 <button class="chip is-on"># Todos</button>
-                <button class="chip"># Premier Pádel</button>
+                <button class="chip"># Torneos</button>
                 <button class="chip"># Técnica</button>
                 <button class="chip"># Fantasy</button>
                 <button class="chip"># Argentina</button>
               </div>
 
               <article class="card post">
-                <div class="post-head"><span class="ava a2">MM</span><div><b>@martin.mdq</b><span class="muted sm"> · hace 5 min · #Técnica</span></div></div>
-                <p>¿Alguien más nota que Coello cambió la empuñadura para la bandeja? Se nota en la cámara táctica 👀</p>
-                <div class="post-actions"><button>❤️ 248</button><button>💬 37</button><button>↗</button></div>
+                <div class="post-head"><span class="ava">MM</span><div><b>@martin.mdq</b><span class="muted sm"> · hace 5 min · #Técnica</span></div></div>
+                <p>¿Alguien más nota que Coello cambió la empuñadura para la bandeja? Se ve en la cámara táctica 👀</p>
+                <div class="post-actions"><button>❤ 248</button><button>💬 37</button><button>↗</button></div>
               </article>
 
-              <article class="card post highlight-post">
-                <div class="post-head"><span class="ava a1">RA</span><div><b>STARPOINT Oficial</b><span class="muted sm"> · #Fantasy</span></div></div>
+              <article class="card post">
+                <div class="post-head"><span class="ava">RA</span><div><b>STARPOINT Oficial</b><span class="muted sm"> · #Fantasy</span></div></div>
                 <p>🏆 Cerró la fecha del Fantasy Pádel. ¿Cómo te fue? Subí tu equipo y comparalo con la comunidad.</p>
                 <button class="btn-volt sm" data-nav="perfil">Ver mi equipo</button>
               </article>
 
               <article class="card post">
-                <div class="post-head"><span class="ava a4">JP</span><div><b>@juanpa.padel</b><span class="muted sm"> · hace 22 min · #Argentina</span></div></div>
+                <div class="post-head"><span class="ava">JP</span><div><b>@juanpa.padel</b><span class="muted sm"> · hace 22 min · #Argentina</span></div></div>
                 <p>La Máster Cup que arma la gente es la mejor idea del año. Ya voté mi cuadro completo 🇦🇷</p>
-                <div class="post-actions"><button>❤️ 512</button><button>💬 64</button><button>↗</button></div>
+                <div class="post-actions"><button>❤ 512</button><button>💬 64</button><button>↗</button></div>
               </article>
 
               <div class="spacer"></div>
@@ -394,35 +357,23 @@
               <p class="muted">Suscribite a tu jugador favorito y accedé a contenido que no está en ningún otro lado.</p>
 
               <article class="card member-card">
-                <div class="mc-top mc-banner" style="background-image:linear-gradient(90deg,rgba(10,11,13,.88),rgba(10,11,13,.25)),url('assets/live.jpg')">
-                  <span class="ava a1 big">AT</span>
-                  <div><b>Agustín Tapia</b><span class="muted sm">Nº1 del ranking FIP</span></div>
-                </div>
+                <div class="mc-top"><span class="ava big">AT</span><div><b>Agustín Tapia</b><span class="muted sm">Nº1 del ranking</span></div></div>
                 <ul class="perks">
-                  <li>🎥 Vlogs y entrenamientos diarios</li>
-                  <li>🎤 Entrevistas exclusivas y vestuario</li>
-                  <li>📅 Vida cotidiana y detrás de escena</li>
+                  <li>Vlogs y entrenamientos diarios</li>
+                  <li>Entrevistas exclusivas y vestuario</li>
+                  <li>Vida cotidiana y detrás de escena</li>
                 </ul>
-                <div class="mc-foot">
-                  <span class="price">USD 5 <span class="muted sm">/ mes</span></span>
-                  <button class="btn-volt">Suscribirme</button>
-                </div>
+                <div class="mc-foot"><span class="price">USD 5 <span class="muted sm">/ mes</span></span><button class="btn-volt">Suscribirme</button></div>
               </article>
 
               <article class="card member-card">
-                <div class="mc-top mc-banner" style="background-image:linear-gradient(90deg,rgba(10,11,13,.88),rgba(10,11,13,.25)),url('assets/court2.jpg')">
-                  <span class="ava a3 big">FC</span>
-                  <div><b>Federico Chingotto</b><span class="muted sm">Top 3 · ARG</span></div>
-                </div>
+                <div class="mc-top"><span class="ava big">FC</span><div><b>Federico Chingotto</b><span class="muted sm">Top 3 · ARG</span></div></div>
                 <ul class="perks">
-                  <li>🎥 Contenido detrás de escena</li>
-                  <li>📊 Análisis de sus partidos</li>
-                  <li>💬 Lives exclusivos para miembros</li>
+                  <li>Contenido detrás de escena</li>
+                  <li>Análisis de sus partidos</li>
+                  <li>Lives exclusivos para miembros</li>
                 </ul>
-                <div class="mc-foot">
-                  <span class="price">USD 4 <span class="muted sm">/ mes</span></span>
-                  <button class="btn-volt">Suscribirme</button>
-                </div>
+                <div class="mc-foot"><span class="price">USD 4 <span class="muted sm">/ mes</span></span><button class="btn-volt">Suscribirme</button></div>
               </article>
               <div class="spacer"></div>
             </div>
@@ -432,7 +383,7 @@
           <section class="view" id="view-perfil">
             <div class="topbar">
               <div class="brand"><span class="logo-dot sm"></span><span class="brand-name">Mi perfil</span></div>
-              <button class="icon-btn">⚙️</button>
+              <button class="icon-btn">⚙</button>
             </div>
             <div class="scroll">
               <div class="profile-top">
@@ -447,24 +398,23 @@
                 <button class="btn-ghost">Personalizar avatar</button>
               </div>
 
-              <div class="card fantasy-card">
-                <div class="row-head plain"><h3>🎮 Fantasy Pádel</h3><span class="count-pill">1.840 pts</span></div>
+              <div class="card">
+                <div class="row-head plain"><h3>Fantasy Pádel</h3><span class="count-pill">1.840 pts</span></div>
                 <div class="fantasy-team">
-                  <div class="ft-player"><span class="ava a1">AT</span><span>Tapia</span><b class="ft-pts">+320</b></div>
-                  <div class="ft-player"><span class="ava a3">FC</span><span>Chingotto</span><b class="ft-pts">+210</b></div>
-                  <div class="ft-player"><span class="ava a2">AC</span><span>Coello</span><b class="ft-pts">+295</b></div>
+                  <div class="ft-player"><span class="ava">AT</span><span>Tapia</span><b class="ft-pts">+320</b></div>
+                  <div class="ft-player"><span class="ava">FC</span><span>Chingotto</span><b class="ft-pts">+210</b></div>
+                  <div class="ft-player"><span class="ava">AC</span><span>Coello</span><b class="ft-pts">+295</b></div>
                 </div>
-                <p class="muted sm">Puesto 412 de 38.207 en la liga global · Top 2%</p>
+                <p class="muted sm">Puesto 412 de 38.207 · Top 2%</p>
               </div>
 
-              <div class="card ticket-card">
-                <div class="row-head plain"><h3>🎟️ Mis entradas</h3></div>
+              <div class="card">
+                <div class="row-head plain"><h3>Mis entradas</h3></div>
                 <div class="ticket">
-                  <div><b>Final · Premier Pádel Buenos Aires</b><span class="muted sm">21 ENE · Platea Norte · Fila 4</span></div>
+                  <div><b>Final · Buenos Aires Open</b><span class="muted sm">21 ENE · Platea Norte · Fila 4</span></div>
                   <span class="qr">▦</span>
                 </div>
                 <button class="btn-ghost">Comprar entradas / palcos ↗</button>
-                <p class="muted sm">Te redirige al sitio oficial de venta · comisión STARPOINT incluida.</p>
               </div>
               <div class="spacer"></div>
             </div>
@@ -472,7 +422,6 @@
 
         </div><!-- /views -->
 
-        <!-- ============ BOTTOM NAV ============ -->
         <nav class="tabbar">
           <button class="tabbar-btn is-on" data-nav="inicio"><span class="ti">⌂</span>Inicio</button>
           <button class="tabbar-btn" data-nav="vivo"><span class="ti">▶</span>En vivo</button>
@@ -481,14 +430,11 @@
           <button class="tabbar-btn" data-nav="perfil"><span class="ti">◐</span>Perfil</button>
         </nav>
 
-      </div><!-- /screen -->
-    </div><!-- /phone -->
+      </div>
+    </div>
   </main>
 
-  <footer class="stage-foot">
-    <span>Prototipo · no funcional · datos de ejemplo</span>
-  </footer>
-
+  <footer class="stage-foot"><span>Prototipo · no funcional · datos de ejemplo</span></footer>
   <script src="app.js"></script>
 </body>
 </html>
