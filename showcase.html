@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a0c10; --surface:#13161c; --line:#252a33;
+    --volt:#d8ff2e; --blue:#2b5cff; --navy:#13346d;
+    --white:#f3f5f8; --muted:#9aa1ad;
+    --display:'Anton','Arial Narrow',sans-serif; --sans:'Archivo',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#05070b;font-family:var(--sans);color:var(--white)}
+  .slide{position:relative;width:1280px;height:720px;overflow:hidden;
+    background:radial-gradient(1100px 700px at 78% -10%,#13233f 0%,#0a0c10 55%);
+    display:flex;align-items:center;gap:56px;padding:72px 80px}
+  .slide::after{content:"";position:absolute;right:-120px;bottom:-160px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(43,92,255,.18),transparent 70%);pointer-events:none}
+  .corner{position:absolute;top:34px;left:80px;display:flex;align-items:center;gap:10px;z-index:3}
+  .dot{width:13px;height:13px;border-radius:50%;background:var(--volt);box-shadow:0 0 16px var(--volt)}
+  .corner b{font-family:var(--display);font-size:22px;letter-spacing:1px}
+  .pageno{position:absolute;bottom:30px;right:40px;color:#3c434f;font-size:14px;font-weight:700}
+
+  /* lado texto */
+  .text{flex:1;z-index:2}
+  .kicker{display:inline-block;background:var(--volt);color:#0a0b0d;font-weight:800;font-size:15px;
+    letter-spacing:1px;padding:6px 14px;border-radius:8px;margin-bottom:22px;text-transform:uppercase}
+  .text h2{font-family:var(--display);font-size:62px;line-height:.98;letter-spacing:.5px;margin-bottom:24px}
+  .text h2 span{color:var(--volt)}
+  .text p.lead{font-size:21px;color:var(--muted);line-height:1.5;margin-bottom:28px;max-width:560px}
+  ul{list-style:none;display:flex;flex-direction:column;gap:18px}
+  li{position:relative;padding-left:42px;font-size:20px;font-weight:600;line-height:1.4;max-width:580px}
+  li .mk{position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:rgba(216,255,46,.14);
+    color:var(--volt);display:grid;place-items:center;font-size:13px;font-weight:900}
+  li b{color:var(--white)}
+
+  /* lado celular */
+  .device{flex:0 0 auto;display:flex;gap:26px;align-items:center;z-index:2}
+  .device img{height:600px;border-radius:34px;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+  .device.two img{height:560px}
+
+  /* portada */
+  .cover{flex-direction:column;justify-content:center;align-items:flex-start;gap:0}
+  #s1 .text{max-width:600px}
+  #s1 .big{font-family:var(--display);font-size:96px;line-height:.92;letter-spacing:1px;margin-bottom:6px}
+  #s1 .big span{color:var(--volt)}
+  #s1 .tag{font-size:21px;color:var(--muted);line-height:1.5;margin:18px 0 4px;max-width:560px}
+  #s1 .pills{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+  #s1 .pill{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:10px 18px;font-weight:700;font-size:16px}
+  #s1 .pill b{color:var(--volt)}
+  .cover .big{font-family:var(--display);font-size:150px;line-height:.9;letter-spacing:2px}
+  .cover .big span{color:var(--volt)}
+  .cover .tag{font-size:26px;color:var(--muted);margin-top:26px;max-width:760px;line-height:1.45}
+  .cover .pills{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap}
+  .cover .pill{border:1px solid var(--line);background:var(--surface);border-radius:999px;
+    padding:11px 20px;font-weight:700;font-size:17px}
+  .cover .pill b{color:var(--volt)}
+  .cover-courts{position:absolute;right:-60px;top:50%;transform:translateY(-50%);opacity:.5}
+  .cover-courts img{width:620px;border-radius:18px}
+
+  /* cierre */
+  .closing{justify-content:center;align-items:center;text-align:center;flex-direction:column}
+  .closing .big{font-family:var(--display);font-size:120px;letter-spacing:2px}
+  .closing .big span{color:var(--volt)}
+  .closing .row{display:flex;gap:14px;margin-top:34px}
+  .closing .row img{height:230px;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+
+  <!-- 1 · PORTADA -->
+  <section class="slide" id="s1">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="text">
+      <span class="kicker">Pádel · OTT &amp; Comunidad</span>
+      <div class="big">STAR<span>POINT</span></div>
+      <p class="tag">La app que transmite, explica y convierte el pádel en experiencia. Partidos en vivo, datos en tiempo real y una comunidad de fans, todo en un solo lugar.</p>
+      <div class="pills">
+        <span class="pill"><b>·</b> Transmisión multicámara</span>
+        <span class="pill"><b>·</b> Estadísticas con IA</span>
+        <span class="pill"><b>·</b> Comunidad &amp; membresías</span>
+      </div>
+    </div>
+    <div class="device"><img src="mockups/inicio.png" alt="STARPOINT"></div>
+    <div class="pageno">01</div>
+  </section>
+
+  <!-- 2 · INICIO -->
+  <section class="slide" id="s2">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="text">
+      <span class="kicker">Inicio</span>
+      <h2>Todo el pádel,<br>en <span>un solo lugar</span></h2>
+      <ul>
+        <li><span class="mk">▸</span> Partidos <b>en vivo y próximos</b> en la portada, estilo transmisión.</li>
+        <li><span class="mk">▸</span> Contenido diario de tus jugadores favoritos.</li>
+        <li><span class="mk">▸</span> Clips y momentos destacados del circuito.</li>
+      </ul>
+    </div>
+    <div class="device"><img src="mockups/inicio.png" alt="Inicio"></div>
+    <div class="pageno">02</div>
+  </section>
+
+  <!-- 3 · EN VIVO -->
+  <section class="slide" id="s3">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="text">
+      <span class="kicker">En vivo</span>
+      <h2>Viví el partido<br>como <span>vos quieras</span></h2>
+      <ul>
+        <li><span class="mk">▸</span> Elegí tu <b>cámara</b>: principal, táctica, player-cam o 360°.</li>
+        <li><span class="mk">▸</span> <b>Pantalla dividida</b>: dos partidos al mismo tiempo.</li>
+        <li><span class="mk">▸</span> <b>Stats con IA</b>, chat en vivo y predicciones.</li>
+      </ul>
+    </div>
+    <div class="device"><img src="mockups/vivo.png" alt="En vivo"></div>
+    <div class="pageno">03</div>
+  </section>
+
+  <!-- 4 · ESTADÍSTICAS -->
+  <section class="slide" id="s4">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="text">
+      <span class="kicker">Estadísticas</span>
+      <h2>Datos en<br><span>tiempo real</span></h2>
+      <ul>
+        <li><span class="mk">▸</span> <b>Velocidad de la pelota</b> y del saque, en km/h.</li>
+        <li><span class="mk">▸</span> Comparativas y análisis táctico del partido.</li>
+        <li><span class="mk">▸</span> Resultados y calendario del circuito.</li>
+      </ul>
+    </div>
+    <div class="device"><img src="mockups/stats.png" alt="Estadísticas"></div>
+    <div class="pageno">04</div>
+  </section>
+
+  <!-- 5 · MÁSTER CUP -->
+  <section class="slide" id="s5">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="text">
+      <span class="kicker">Máster Cup</span>
+      <h2>El torneo lo<br>arma <span>la gente</span></h2>
+      <ul>
+        <li><span class="mk">▸</span> <b>Votás los cruces</b>, de 16avos a la final.</li>
+        <li><span class="mk">▸</span> Las parejas y el cuadro los definen los fans.</li>
+        <li><span class="mk">▸</span> Un torneo distinto, durante la pretemporada.</li>
+      </ul>
+    </div>
+    <div class="device"><img src="mockups/copa.png" alt="Máster Cup"></div>
+    <div class="pageno">05</div>
+  </section>
+
+  <!-- 6 · COMUNIDAD & MEMBRESÍAS -->
+  <section class="slide" id="s6">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="text">
+      <span class="kicker">Comunidad &amp; Membresías</span>
+      <h2>Comunidad y<br><span>contenido exclusivo</span></h2>
+      <ul>
+        <li><span class="mk">▸</span> <b>Foro</b> para debatir con otros fans del pádel.</li>
+        <li><span class="mk">▸</span> <b>Membresías por jugador</b>: vlogs, entrenamientos y vida cotidiana.</li>
+        <li><span class="mk">▸</span> Fantasy Pádel, entradas y avatar personalizado.</li>
+      </ul>
+    </div>
+    <div class="device two"><img src="mockups/comunidad.png" alt="Comunidad"><img src="mockups/membresias.png" alt="Membresías"></div>
+    <div class="pageno">06</div>
+  </section>
+
+  <!-- 7 · CIERRE -->
+  <section class="slide closing" id="s7">
+    <div class="corner"><span class="dot"></span><b>STARPOINT</b></div>
+    <div class="big">STAR<span>POINT</span></div>
+    <p class="tag" style="color:var(--muted);font-size:24px;margin-top:18px">Pádel en vivo, datos y comunidad — la nueva forma de vivir el deporte.</p>
+    <div class="row">
+      <img src="mockups/inicio.png" alt=""><img src="mockups/vivo.png" alt=""><img src="mockups/stats.png" alt=""><img src="mockups/copa.png" alt="">
+    </div>
+    <div class="pageno">07</div>
+  </section>
+
+</body>
+</html>
